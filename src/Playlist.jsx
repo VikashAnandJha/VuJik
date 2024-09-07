@@ -1,9 +1,30 @@
-import React, { useEffect } from "react";
-import songs from "./songs.json";
+import React, { useEffect, useState } from "react";
+import localsongs from "./songs.json";
 function Playlist({ changeSong }) {
-  // Sample playlist data
+  const [songs, setSongs] = useState(localsongs);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    // URL of the JSON data
+    const url =
+      "https://raw.githubusercontent.com/VikashAnandJha/VuJik/main/src/songs.json";
+
+    fetch(url)
+      .then((response) => {
+        // Check if the request was successful
+        if (!response.ok) {
+          throw new Error("Network response was not ok " + response.statusText);
+        }
+        // Parse the JSON data
+        return response.json();
+      })
+      .then((data) => {
+        setSongs(data);
+      })
+      .catch((error) => {
+        // Handle any errors that occurred during the fetch
+        console.error("There was a problem with the fetch operation:", error);
+      });
+  }, []);
   return (
     <div
       style={{
