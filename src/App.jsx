@@ -16,18 +16,26 @@ function App() {
   return (
     <div
       className="container"
-      style={{ display: "flex", flexDirection: "row", padding: 0 }}
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        padding: 0,
+        justifyItems: "start",
+        justifyContent: "space-between",
+      }}
     >
       {!showPlayList ? (
-        <audio controls>
-          <source src={songUrl} type="audio/mpeg" />
-        </audio>
+        <div>
+          <audio controls autoPlay>
+            <source src={songUrl} type="audio/mpeg" />
+          </audio>
+        </div>
       ) : (
         <Playlist changeSong={changeSong} />
       )}
       <div>
         {" "}
-        <button onClick={() => setshowPlayList(!showPlayList)}>--</button>
+        <button onClick={() => setshowPlayList(!showPlayList)}>🎶</button>
       </div>
     </div>
   );

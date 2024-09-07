@@ -28,19 +28,25 @@ function Playlist({ changeSong }) {
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        flexGrow: 1,
-        maxHeight: 30,
+        height: 50,
         overflowY: "scroll",
-        border: 1,
-        borderColor: "ActiveBorder",
+        flexGrow: 1,
+        textAlign: "left",
       }}
     >
       {songs.map((song, index) => (
-        <span key={index}>
-          <strong onClick={async () => changeSong(song)}>{song.name}</strong>
-        </span>
+        <div
+          key={index}
+          style={{
+            borderBottom: "0.5px solid green",
+            justifyContent: "left",
+            padding: 3,
+          }}
+          className="hoverClass"
+          onClick={async () => changeSong(song)}
+        >
+          <big>{song.name}</big>
+        </div>
       ))}
     </div>
   );

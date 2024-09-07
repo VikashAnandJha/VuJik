@@ -18,7 +18,8 @@
       "shell": {
         "all": false,
         "open": true
-      },"window": {
+      },
+      "window": {
         "all": true,
         "setTitle": true
       }
@@ -28,7 +29,8 @@
         "title": "vujik",
         "width": 400,
         "height": 80,
-        "alwaysOnTop": true
+        "alwaysOnTop": true,
+        "transparent": true
       }
     ],
     "security": {
