@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import localsongs from "./songs.json";
 function Playlist({ changeSong }) {
-  const [songs, setSongs] = useState(localsongs);
+  const [songs, setSongs] = useState([]);
 
   useEffect(() => {
     // URL of the JSON data

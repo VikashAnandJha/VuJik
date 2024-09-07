@@ -1,7 +1,4 @@
-[{
-    "name": "Admiring you",
-    "url": "https://pagalworld.cool/files/download/id/315"
-  },
+[
     {
       "name": "tauba tauba",
       "url": "https://djjohal.com.in/songs/128/Hindi/4161/Tauba%20Tauba%20-%20Djjohal.fm.mp3"
@@ -10,7 +7,10 @@
       "name": "Antidote",
       "url": "https://djjohal.com.in/songs/128/Punjabi/4049/Antidote%20-%20Djjohal.fm.mp3"
     },
-    
+    {
+        "name": "Admiring you",
+        "url": "https://pagalworld.cool/files/download/id/315"
+      },
     {
       "name": "jee ni krda",
       "url": "https://p320.djpunjab.is/data/48/54172/302537/Jee%20Ni%20Lagda%20-%20Karan%20Aujla.mp3"
